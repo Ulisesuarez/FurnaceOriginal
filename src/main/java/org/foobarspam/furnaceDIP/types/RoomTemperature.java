@@ -10,7 +10,6 @@ public class RoomTemperature {
 
 	public static RoomTemperature getInstance() {
 	    if (instance == null) {
-	        System.out.println("Ha entrado en RoomTemperature EN EL IF");
 	        instance = new RoomTemperature();
         }
         return instance;

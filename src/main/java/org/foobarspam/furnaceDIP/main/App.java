@@ -12,14 +12,15 @@ import org.foobarspam.furnaceDIP.types.RoomTemperature;
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class App {
+    public static void main( String[] args ) {
     	final double minTemp = 15.0;
         final double maxTemp = 21.0;
-        
-        RoomTemperature temperature = new RoomTemperature(15);
+
+        RoomTemperature temperature = RoomTemperature.getInstance();
+        temperature.setTemperature(15.0);
+
+
         Heater heater = new GasHeater();
         Thermometer thermometer = new RemoteCommandSensor();
         
